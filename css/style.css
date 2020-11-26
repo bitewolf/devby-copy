@@ -189,14 +189,23 @@ h1, h2, h3, h4 {
 .glagne__container {
     flex:0 0 75%;
     max-width: 75%;
+
 }
+
+
 
 .news {
     padding: .75rem 1rem;
     border-bottom: 1px solid rgba(34,34,34,0.1);
     border-right: 1px solid rgba(34,34,34,0.1);
 }
+.news__blocks, .news__blocks2 {
+    display: none;
+}
 
+.visible {
+    display: block;
+}
 h1 {
     font-size: 2.1rem;
     font-weight: 800;
@@ -358,6 +367,7 @@ div > li.active:hover {
 }
 div > li.active:hover > a{
     color: #000;
+    pointer-events: none;
 }
 
 .news__footer-pages > li > a {
@@ -370,6 +380,7 @@ div > li.active:hover > a{
 }
 .news__footer-pages > li:hover > a {
     color:  #283cdc;
+    pointer-events: none;
 }
 /* Реклама **********
 ********************/
