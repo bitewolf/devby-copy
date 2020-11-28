@@ -332,14 +332,25 @@ a.news__link:hover+div > div:first-child {
     cursor: pointer;
 
 }
+.news__footer-list > li.disable {
+    opacity: 0.4;
+    cursor:default;
+}
 
 .news__footer-list > li > a {
     color: #283cdc;
     text-decoration: none;
 }
+.news__footer-list > li.disable > a {
+     opacity: 0.4;
+    cursor:default;
+}
+
 .news__footer-list > li:hover {
     background-color: #dfe2fa;
 }
+
+
 
 .news__footer-pages {
     display: flex;
