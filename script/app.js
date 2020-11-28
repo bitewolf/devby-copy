@@ -95,10 +95,11 @@ let zalupa = document.querySelector('.news__blocks0').classList.add('visible');/
 
 let pageClickAll = document.querySelector('.news__footer-pages').querySelectorAll('li');
 let pageNext = document.querySelector('.news__footer-list').querySelector('li');
+let news__blocksAll = document.querySelector('.news__blocks-container').querySelectorAll('div');
 //жалкие попытки присрать пагинацию
 for (let i = 0; i < pages; i++){
 
-let news__blocksAll = document.querySelector('.news__blocks-container').querySelectorAll('div');
+
 let news__blocks = document.querySelector('.news__blocks'+i);
 
 
@@ -122,7 +123,11 @@ for (let blockDel of news__blocksAll){                  //удаление кл�
 
     activeButton = Number(pageClick.querySelector('a').textContent);
 
-
+if (activeButton == 5) {
+    document.querySelector('.news__footer-list').querySelector('li').classList.add('disable');
+} else {
+    document.querySelector('.news__footer-list').querySelector('li').classList.remove('disable');
+}
 
 
 });
@@ -137,9 +142,11 @@ pageNext.addEventListener("click", function() {
 for (let pageDel of pageClickAll) {
     pageDel.classList.remove('active');
     };
+for (let blockDel of news__blocksAll){    //удаление класса visible со всех блоков
+    blockDel.classList.remove('visible')
+    };
 
-//console.log(document.getElementById('page'+activeButton));
-
+document.querySelector('.news__blocks'+activeButton).classList.add('visible');
 document.getElementById('page'+activeButton).classList.add('active');
 activeButton = activeButton + 1;
     console.log(activeButton);
@@ -155,7 +162,7 @@ if (activeButton == 5) {
 } else {
     document.querySelector('.news__footer-list').querySelector('li').classList.remove('disable');
 }
-console.log(document.querySelector('.news__footer-list').querySelector('li'));
+
 
 
 
