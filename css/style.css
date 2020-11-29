@@ -338,6 +338,7 @@ a.news__link:hover+div > div:first-child {
 }
 
 .news__footer-list > li > a {
+    pointer-events: none;
     color: #283cdc;
     text-decoration: none;
 }
