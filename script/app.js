@@ -47,8 +47,8 @@ let pageNext = document.querySelector('.news__footer-list').querySelector('li');
 let news__blocksAll = document.querySelector('.news__blocks-container').querySelectorAll('div');
 //пагинация
 function checkNxtBttn() {
+    let NxtBttn = document.querySelector('.news__footer-list').querySelector('li');
     if (activeButton == 5) {
-        let NxtBttn = document.querySelector('.news__footer-list').querySelector('li');
         NxtBttn.classList.add('disable');
     }
     else {
