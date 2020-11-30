@@ -13,11 +13,7 @@ for (let pageCount = 0; pageCount < pages; pageCount++) {
     news__blocksContainer.appendChild(news__page);
     for (let newsCount = 0; newsCount < 6; newsCount++) {
         let k = newsCount + pageCount * 6;
-        let newsDivReplace = newsDiv.replace('insImgUrl', dataObj[k].urlImg);
-        newsDivReplace = newsDivReplace.replace('insTitle', dataObj[k].title);
-        newsDivReplace = newsDivReplace.replace('insText', dataObj[k].text);
-        newsDivReplace = newsDivReplace.replace('insComment', dataObj[k].coment);
-        newsDivReplace = newsDivReplace.replace('insTag', dataObj[k].tag);
+        let newsDivReplace = newsDiv.replace('insImgUrl', dataObj[k].urlImg).replace('insTitle', dataObj[k].title).replace('insText', dataObj[k].text).replace('insComment', dataObj[k].coment).replace('insTag', dataObj[k].tag);
         news__page.insertAdjacentHTML('beforeend', newsDivReplace);
     }
 }
