@@ -11,7 +11,6 @@ for (let pageCount = 0; pageCount < pages; pageCount++) {
     let news__blocksContainer = document.querySelector('.news__blocks-container');
     news__blocksContainer.appendChild(news__page);
     for (let newsCount = 0; newsCount < 6; newsCount++) {
-        console.log(newsCount + pageCount * 6);
         //Создание блока с новостью.
         let news__div = document.createElement('div');
         news__div.className = "news__block";
@@ -75,14 +74,12 @@ for (let i = 0; i < pages; i++) {
         checkNxtBttn();
     });
 }
-console.log(activeButton);
 pageNext.addEventListener("click", function () {
     if (activeButton !== 5) {
         hide();
         document.querySelector('.news__blocks' + activeButton).classList.add('visible');
         document.getElementById('page' + activeButton).classList.add('active');
         activeButton = activeButton + 1;
-        console.log(activeButton);
         checkNxtBttn();
     }
 });
