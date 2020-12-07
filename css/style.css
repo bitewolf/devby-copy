@@ -192,30 +192,69 @@ h1, h2, h3, h4 {
     display: none;
     flex-direction: column;
     position: absolute;
-    background-color: #ccc;
-    border: 1px solid #000;
-
+    background-color: #f5f5f7;
+    border: 1px solid rgba(34,34,34,0.1);
+    /*box-shadow: 0 0 0 1px rgba(0,0,0,0.075), 0 4px 4px 0 rgba(0,0,0,0.1);*/
+    border-radius: 5px;
     z-index: 100;
 }
 
 .toggle.show {
     display: flex;
+
 }
 .toggleSearch {
+    width: 100%;
     height: 56px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgba(34,34,34,0.1);
+}
+.toggleSearch > p {
+    padding-left: 1rem;
+    color: rgba(34,34,34,0.4);
 }
 .toggleMenu {
     display: flex;
     flex-direction: row;
 }
+
+.toggleMenu > .toggleColumn:first-child > a:first-child {
+    opacity: .5;
+}
+.toggleMenu > .toggleColumn:first-child > a:hover:first-child {
+    color: #283cdc;
+}
 .toggleColumn {
     width: 50%;
     display: flex;
     flex-direction: column;
+    padding-top: .5rem;
+    padding-bottom: 1.33rem;
+}
+.toggleColumn a {
+    color: #222222;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-top: .85rem;
+}
+.toggleColumn a:hover {
+    color: #283cdc;
 }
 .toggleBlock {
-    border-top: 1px solid #000;
+    border-top: 1px solid rgba(34,34,34,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.toggleBlock > a {
+    padding-left: 1rem;
+    padding-top: .85rem;
+    text-decoration: none;
+    color: rgba(34,34,34,0.6);
+    font-size: .8rem;
+}
+
+.toggleBlock > a:hover {
+    color: #222222;
 }
 /* News
 ==================*/
