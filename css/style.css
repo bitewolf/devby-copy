@@ -1,8 +1,36 @@
+@font-face {
+    font-family: "formular";
+    src: url(../font/formular-regular-webfont-65a1ebaea1e6b94954b263a9bcb5c3c0ebe850117e4609f45d6382f180e51bd5.woff2) format("woff2"), url(../font/formular-regular-webfont-460a613d6e010fc1d2a7c5812d52ca25f5f8390cd00331578001fc16623a2e4b.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "formular";
+    src: url(../font/formular-medium-webfont-3fe9fb6c8089e2bc778e8046d4b9c707eb3ddee084d65d82fe2d18b1b36421cc.woff2) format("woff2"), url(../font/formular-medium-webfont-bfc9f51831f6354a332edb0e75c7eefc6033bb59f04b526c0990ed5b0eba88c2.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "formular";
+    src: url(../font/formular-bold-webfont-c3e6faee3067311a264ba79d8252976b70b038213249146a01faf33f6d3d8b52.woff2) format("woff2"), url(../font/formular-bold-webfont-c2f0d7fcd789f82723ed5cce400e1f7a2bc9c09e0e3df0399536c6e59b11d9c4.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "formular";
+    src: url(../font/formular-black-webfont-33e9452ea5ae4f53fdd65ccdc0afdcad4774a5b083c8ed87c6d6f4ec0e2269bf.woff2) format("woff2"), url(../font/formular-black-webfont-d94144d8197237afc8cd17f7abcf20e5ee3e422c1cf094a0afb215357526fdd7.woff) format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
 body {
     margin: 0;
 
     font-family: "formular", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     color: #222222;
     font-weight: 700;
     line-height: 1.4;
@@ -35,7 +63,7 @@ h1, h2, h3, h4 {
 .burger {
     height: 16px;
     width: 24px;
-    left: 10px;
+
     display: block;
     background: none;
     border: 0;
@@ -44,7 +72,7 @@ h1, h2, h3, h4 {
 
 }
  .burger__item {
-     margin-left:-6px;
+     margin-left:-8px;
      display: block;
      width: 24px;
      height: 2px;
@@ -101,9 +129,9 @@ h1, h2, h3, h4 {
 /*Logo
 ==================*/
 .logo {
-    transform: translateY(-4px);
+    transform: translate(0px,-2px);
     padding-right: 1rem;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 }
 
 /*Menu
@@ -112,10 +140,12 @@ h1, h2, h3, h4 {
     padding-right: .5rem;
 }
 .header__menu a {
+    font-size: 17px;
+    font-weight: 600;
     text-decoration: none;
     color: #222222;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+/*    padding-right: 0.5rem;*/
+    padding-left: 0.75rem;
 }
 .header__menu a:first-child {
     opacity: .5;
@@ -124,23 +154,25 @@ h1, h2, h3, h4 {
     color: #283cdc;
 }
 .nav__label:after {
-    content:"638";
+    content: attr(data-label);
     font-size: 0.7rem;
     margin-left: 0.25rem;
-    vertical-align: top;
     opacity: 0.4;
+
 }
 
 /*Covid stats
 ==================*/
 .covid__stats {
-
+    height: 100%;
     text-decoration: none;
     color: #aaa;
     font-size: 11px;
-    font-weight: 400;
+
     color: rgba(34,34,34,0.6);
 
+    padding-top: 1.7rem;
+    padding-left: .5rem;
     display: flex;
 
 
@@ -155,16 +187,20 @@ h1, h2, h3, h4 {
     margin-right: .33rem;
 }
 .covid__by {
+    font-weight: 500;
+    padding-left: .25rem;
     padding-right: 5px;
     display: flex;
 
 }
 .covid__by img {
     margin-right: 3px;
+    min-width: 14px;
 }
 
 .covid__world {
     display: flex;
+    font-weight: 500;
 }
 
 .covid__world img {
@@ -179,11 +215,14 @@ h1, h2, h3, h4 {
 .reg {
     text-decoration: none;
     color: #222222;
-    padding-right: .75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding-right: .5rem;
 
 
 }
 .reg:hover {
+
     color: #007aff;
 
 }
@@ -191,7 +230,7 @@ h1, h2, h3, h4 {
 /* Home
 ==================*/
 .glagne {
-    border-radius: 1rem;
+    border-radius: .5rem;
     background-color: #fff;
     width: 100%;
     max-width: 1200px;
@@ -249,6 +288,8 @@ h1, h2, h3, h4 {
 }
 .toggleColumn a {
     color: #222222;
+    font-weight: 600;
+    font-size: 1.05rem;
     text-decoration: none;
     padding-left: 1rem;
     padding-top: .85rem;
@@ -257,6 +298,7 @@ h1, h2, h3, h4 {
     color: #283cdc;
 }
 .toggleBlock {
+    padding-top: .8rem;
     border-top: 1px solid rgba(34,34,34,0.1);
     display: flex;
     flex-direction: column;
@@ -281,8 +323,6 @@ h1, h2, h3, h4 {
 
 }
 
-
-
 .news {
     padding: .75rem 1rem;
     border-bottom: 1px solid rgba(34,34,34,0.1);
@@ -296,10 +336,10 @@ h1, h2, h3, h4 {
     display: block !important;
 }
 h1 {
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.025em;
-    font-family: "formular black", sans-serif;
+    font-family: "formular", sans-serif;
 }
 
 .news__block {
@@ -321,7 +361,7 @@ h1 {
     padding: 0 1rem;
     font-size: 19px;
     font-weight: 800;
-    font-family: "formular black", sans-serif;
+    font-family: "formular", sans-serif;
 
     }
 
