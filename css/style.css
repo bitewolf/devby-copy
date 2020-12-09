@@ -155,9 +155,14 @@ h1, h2, h3, h4 {
 }
 .nav__label:after {
     content: attr(data-label);
-    font-size: 0.7rem;
     margin-left: 0.25rem;
+    font-size: 0.7rem;
+    line-height: 1.2;
     opacity: 0.4;
+    padding-top: 1.5rem;
+    position: relative;
+    bottom:4px;
+
 
 }
 
@@ -265,8 +270,11 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(34,34,34,0.1);
 }
 .toggleSearch > p {
-    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding-left: 0.95rem;
     color: rgba(34,34,34,0.4);
+    align-items: center;
 }
 .toggleMenu {
     display: flex;
@@ -283,17 +291,42 @@ h1, h2, h3, h4 {
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: .5rem;
+    padding-top: .4rem;
     padding-bottom: 1.33rem;
 }
+
 .toggleColumn a {
     color: #222222;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.05em;
     text-decoration: none;
     padding-left: 1rem;
     padding-top: .85rem;
 }
+
+.toggleColumn .covid__stats{
+    font-size: 11px;
+    color: rgba(34,34,34,0.6);
+    flex-direction: column;
+}
+.toggleColumn a.covid__stats:hover .covid{
+    color: #222222;
+}
+
+.toggleColumn a.covid__stats:hover .covid__by{
+    color: #222222;
+}
+
+.toggleColumn a.covid__stats:hover .covid__world{
+    color: #222222;
+}
+
+.covid__stats .covid__flags {
+    display: flex;
+    flex-direction: row;
+}
+
 .toggleColumn a:hover {
     color: #283cdc;
 }
@@ -310,6 +343,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
     color: rgba(34,34,34,0.6);
     font-size: .8rem;
+    font-weight: 600;
 }
 
 .toggleBlock > a:hover {
