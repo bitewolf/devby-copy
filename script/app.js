@@ -1,13 +1,14 @@
 //burger
 let nav = document.querySelector('#nav');
 let navToggle = document.querySelector('#navToggle');
-
+let burger__item = document.querySelector('#navBtn');
 navToggle.addEventListener("click", function () {
         if (nav.classList.contains('show')) {
-            nav.classList.remove('show')
-        } else
+            nav.classList.remove('show');
+            burger__item.classList.remove('burger__item-active');
+        } else {
             nav.classList.add('show');
-
+burger__item.classList.add('burger__item-active');}
     });
 
 

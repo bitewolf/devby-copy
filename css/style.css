@@ -33,20 +33,22 @@ h1, h2, h3, h4 {
 /*Burger
 ==================*/
 .burger {
+    height: 16px;
+    width: 24px;
+    left: 10px;
     display: block;
     background: none;
     border: 0;
     cursor: pointer;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1.5rem;
+
 }
  .burger__item {
+     margin-left:-6px;
      display: block;
      width: 24px;
      height: 2px;
-
      background-color: #222;
-
      font-size: 0;
      color: transparent;
 
@@ -56,12 +58,12 @@ h1, h2, h3, h4 {
     outline: none;
 
 }
+
 .burger__item:before,
 .burger__item:after{
     content: "";
     height: 100%;
     background-color: #222;
-
     position: absolute;
     right: 0;
     z-index: 0;
@@ -73,13 +75,28 @@ h1, h2, h3, h4 {
 .burger__item:after {
     width:24px;
     top:7px;
+
 }
-.burger__item:hover,
-.burger__item:hover:before,
-.burger__item:hover:after{
+.burger__item-active.burger__item:before{
+  transform-origin: left top;
+  transform: rotate(45deg) translate(2px, -4px);
+}
+.burger__item-active.burger__item:after{
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translate(2px, 4px);
+
+}
+.burger__item-active.burger__item {
+   background: none;
+}
+.burger:hover > .burger__item-active.burger__item {
+   background: none;
+}
+.burger:hover > .burger__item,
+.burger:hover > .burger__item:before,
+.burger:hover > .burger__item:after{
     background-color: #283cdc;
 }
-
 
 /*Logo
 ==================*/
