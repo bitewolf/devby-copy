@@ -11,20 +11,17 @@ navToggle.addEventListener("click", function () {
 burger__item.classList.add('burger__item-active');}
     });
 
-
-
-
-
-
 const news__blockis = document.querySelectorAll(".news__block");
 
 let newsDiv = '<div class="news__block"><img class="news__img" src="urlImg" alt=""><a class="news__link" href=""></a><div class="news__block-text"><div class="news__title">titleSrc</div><div class="news__text">textSrc</div><div class="news__coment">comentSrc</div><div class="news__tag">tagSrc</div></div></div>';
 let newsBttn = '<li id="replace0"><a href="#">replace1</a></li>'
 async function getResponse() {
-    let response = await fetch('http://localhost:3000/posts');
+    let response = await fetch('https://my-json-server.typicode.com/bitewolf/devby-copy/posts');
     return await response.json();
 }
 let pages = 5;
+
+const arrayPromise = getResponse(); //сохранение промиса с массивом в переменную, чтобы не стучать 30 раз на сервак
 
 function renderPage(array, template, iziCounter) {
     for (let key in array[iziCounter]) {
@@ -45,7 +42,7 @@ for (let pageCount = 0; pageCount < pages; pageCount++) {
     news__blocksContainer.appendChild(news__page);
     for (let newsCount = 0; newsCount < 6; newsCount++) {
         let k = newsCount + pageCount * 6;
-        getResponse().then(resp => renderPage(resp, newsDiv, k)).then(resp => news__page.insertAdjacentHTML('beforeend', resp)); //добавление результата функции в верстку
+        arrayPromise.then(resp => renderPage(resp, newsDiv, k)).then(resp => news__page.insertAdjacentHTML('beforeend', resp)); //добавление результата функции в верстку
     }
     bttnFooter.insertAdjacentHTML('beforeend', generatorBttn(newsBttn, pageCount));
 }
